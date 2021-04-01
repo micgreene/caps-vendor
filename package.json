@@ -1,0 +1,29 @@
+{
+  "name": "caps-vendor",
+  "version": "1.0.0",
+  "description": "Codefellows 401 JavaScript - Lab12: Connect to a Socket.io Server Via a Separate Client",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "faker": "^5.5.2",
+    "i": "^0.3.6",
+    "npm": "^7.7.6",
+    "socket.io": "^2.4.1",
+    "socket.io-client": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micgreene/caps-vendor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micgreene/caps-vendor/issues"
+  },
+  "homepage": "https://github.com/micgreene/caps-vendor#readme"
+}
