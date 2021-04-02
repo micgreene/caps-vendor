@@ -17,12 +17,17 @@ let STORENAME = process.env.STORENAME;
 let orderNumTracker = -1;
 
 //connect to socket
-const socket = io.connect(host);
+const socket = io.connect(`${host}/caps`);
 
 //call each event emitter explicitly
 socket.on('delivered', deliveryComplete);
 socket.on('in-transit', delivering);
 
+socket.emit('enter-room', STORENAME);
+
+socket.on('connectToRoom', payload => {
+  console.log(payload);
+});
 
 //outlines properties of object for new order details and assign it a new id
 function fakeorder(){  
