@@ -10,7 +10,6 @@ const eventMessage = require('./event-message.js');
 //configure .env variables
 require('dotenv').config();
 
-
 let host = 'http://localhost:3501';
 let STORENAME = process.env.STORENAME;
 //causes first order to always start at id: 0
@@ -27,6 +26,8 @@ socket.emit('enter-room', STORENAME);
 
 socket.on('connectToRoom', payload => {
   console.log(payload);
+   // sending to all clients in "game1" and/or in "game2" room, except sender
+   socket.to(STORENAME).emit('nice game', 'let\'s play a game (too)');
 });
 
 //outlines properties of object for new order details and assign it a new id
